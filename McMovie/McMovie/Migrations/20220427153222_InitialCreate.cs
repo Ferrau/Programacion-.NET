@@ -7,8 +7,10 @@ namespace McMovie.Migrations
 {
     public partial class InitialCreate : Migration
     {
+        /*UnitialCreate.Up: crea la tabla Movie y configura ID como la clave principal*/
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            
             migrationBuilder.CreateTable(
                 name: "Movie",
                 columns: table => new
@@ -26,8 +28,10 @@ namespace McMovie.Migrations
                 });
         }
 
+        /*UnitialCreate.Down: revierte los cambios de esquema realizado por la migracion Up*/
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            
             migrationBuilder.DropTable(
                 name: "Movie");
         }
